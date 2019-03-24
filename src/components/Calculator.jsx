@@ -5,7 +5,6 @@ import KeyPad from './KeyPad';
 class Calculator extends Component {
   constructor(props) {
     super(props);
-    this.state = { result: '' };
 
     this.handleClick = this.handleClick.bind(this);
   }
@@ -13,32 +12,23 @@ class Calculator extends Component {
   handleClick(event) {
     switch (event.target.innerHTML) {
       case 'AC':
-        this.setState({
-          result: ''
-        });
+        this.props.setResult('');
         break;
       case 'C':
-        this.setState({
-          result: this.state.result.slice(0, -1)
-        });
+        this.props.setResult(this.props.result.slice(0, -1));
         break;
       case '=':
-        this.setState({
-          result: eval(this.state.result)
-        });
+        this.props.setResult(eval(this.props.result));
         break;
       default:
-        this.setState({
-          result: this.state.result + event.target.innerHTML
-        });
+        this.props.setResult(this.props.result + event.target.innerHTML);
     }
-    console.log('this is:', event.target.innerHTML);
   }
 
   render() {
     return (
       <div className="calculator">
-        <Result value={this.state.result} />
+        <Result value={this.props.result} />
         <KeyPad onClick={this.handleClick} />
       </div>
     );
