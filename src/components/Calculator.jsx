@@ -6,8 +6,8 @@ class Calculator extends Component {
   render() {
     return (
       <div className="calculator">
-        <Result/>
-        <KeyPad/>
+        <Result />
+        <KeyPad />
       </div>
     );
   }
