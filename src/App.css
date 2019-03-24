@@ -23,6 +23,15 @@
   color: #61dafb;
 }
 
+.calculator {
+  float: left;
+  width: 45%;
+}
+.quote {
+  float: left;
+  width: 45%;
+}
+
 .result input {
   width: 200px;
   border: 0;

@@ -11,17 +11,21 @@ class App extends Component {
     this.setResult = this.setResult.bind(this);
   }
 
-  setResult(newResult) {
+  setResult(newResult, updateQuote = false) {
     this.setState({
-      result: newResult
+      result: newResult + ''
     });
+
+    if (updateQuote) {
+      this.refs.quoteComponent.updateQuote(Math.floor(newResult));
+    }
   }
 
   render() {
     return (
       <div className="App">
         <Calculator setResult={this.setResult} result={this.state.result} />
-        <Quote />
+        <Quote ref="quoteComponent" />
       </div>
     );
   }

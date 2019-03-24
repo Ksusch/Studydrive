@@ -18,7 +18,7 @@ class Calculator extends Component {
         this.props.setResult(this.props.result.slice(0, -1));
         break;
       case '=':
-        this.props.setResult(eval(this.props.result));
+        this.props.setResult(eval(this.props.result), true);
         break;
       default:
         this.props.setResult(this.props.result + event.target.innerHTML);

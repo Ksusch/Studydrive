@@ -1,17 +1,17 @@
 import axios from 'axios';
 
-const ServerUrl = 'http://numbersapi.com/';
+const serverUrl = 'http://numbersapi.com/';
 
 class ApiService {
   constructor() {
     this.service = axios.create({
-      baseURL: ServerUrl
+      baseURL: serverUrl
     });
   }
 
   getQuote(result) {
-    return this.service.get(result).then(res => res.data);
+    return this.service.get(result + '').then(res => res.data);
   }
 }
 
-export { ServerUrl as default, ApiService };
+export default ApiService;
