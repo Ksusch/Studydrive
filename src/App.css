@@ -1,4 +1,9 @@
+body {
+  background: black;
+  color: white;
+}
 .App {
+  padding: 50px 0;
   text-align: center;
 }
 
@@ -25,17 +30,24 @@
 
 .calculator {
   float: left;
-  width: 45%;
+  width: 300px;
 }
 .quote {
   float: left;
-  width: 45%;
+  font-size: 38px;
+  width: 600px;
+  text-align: left;
+  margin-left: 10px;
 }
 
 .result input {
   width: 200px;
   border: 0;
   text-align: right;
+  font-size: 24px;
+  height: 50px;
+  background: #222;
+  color: white;
 }
 
 .keypad-row .col-2 {
@@ -43,6 +55,23 @@
 }
 .keypad-row .col-1 {
   width: 50px;
+}
+
+.keypad-row .number {
+  background-color: #282c34;
+  color: #ddd;
+}
+.keypad-row .operation {
+  background-color: orange;
+  color: #fff;
+}
+
+.keypad-row button {
+  height: 50px;
+  border-radius: 50px;
+  margin: 3px;
+  font-size: 20px;
+  background: #ccc;
 }
 
 @keyframes App-logo-spin {

@@ -9,6 +9,7 @@ class Quote extends Component {
     };
 
     this.apiService = new ApiService();
+    this.updateQuote(Math.floor(Math.random() * 100));
   }
 
   updateQuote(result) {
