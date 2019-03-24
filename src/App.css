@@ -26,6 +26,7 @@
 .result input {
   width: 200px;
   border: 0;
+  text-align: right;
 }
 
 .keypad-row .col-2 {
